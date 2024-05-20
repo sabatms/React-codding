@@ -1,25 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div>
+   <User name="saba" age={25} email="sab@tms15" />
+   <User name="ali" age={43} email="----" />
+   <User name="zahra" age={222} email="none" />
+   <hr></hr>
+   <Job  salary={100000000} position="Senior Front-end" company="SnappGrowp" />
+   <Job  salary={150000000} position="Front-end Dev" company="Digikala" />
+   <Job  salary={20000000} position="Back-end" company="Divar" />
+   </div>
   );
+}
+
+const User = (props)=>{
+  return(
+    <div>
+    <h1>{props.name} ,{props.age} ,{props.email}</h1>
+    </div>
+  )
+}
+
+const Job = (props) =>{
+  return(
+    <div>
+     <h2>{props.salary} ,{props.position} ,{props.company}</h2>
+    </div>
+  )
 }
 
 export default App;
